@@ -1,0 +1,22 @@
+{
+    "employees": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "job": "Software Engineer",
+        "photo": "Li4vc3JjL2Fzc2V0cy9zYWdpdGthbWlsb3ZpYy5qcGc="
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "job": "Product Designer",
+        "photo": "jane-smith.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Bob Johnson",
+        "job": "Data Analyst",
+        "photo": "bob-johnson.jpg"
+      }
+    ]
+  }

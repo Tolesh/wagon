@@ -1,0 +1,150 @@
+/* #home {
+    clip-path: url(#cache);
+  }
+  
+  #red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #CE1B5F;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+  }
+  
+  #blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 12;
+    stroke-miterlimit:10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  #light-blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 6;
+    stroke-miterlimit:10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;    
+  }
+  
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+   }
+      }
+  
+  @keyframes show {
+    0% {
+      opacity: 0.15;
+   }
+    50% {
+      opacity: 0.2;
+   }
+    100% {
+      opacity: 0.15;
+   }
+      }
+  
+  
+  
+   */
+
+   .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #221F2E;
+  }
+  
+  .dotWrapper {
+    position: absolute;
+  }
+  
+  @keyframes flying {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(20px, 50px);
+    }
+    20% {
+      transform: translate(-30px, 10px);
+    }
+    30% {
+      transform: translate(10px, 60px);
+    }
+    40% {
+      transform: translate(50px, 0px);
+    }
+    50% {
+      transform: translate(-10px, -40px);
+    }
+    60% {
+      transform: translate(-40px, 20px);
+    }
+    70% {
+      transform: translate(30px, -30px);
+    }
+    80% {
+      transform: translate(0px, -60px);
+    }
+    90% {
+      transform: translate(40px, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
+  @keyframes rotating {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    25%, 75% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(360deg);
+    }
+  }
+  
+  .dot {
+    width: 4px;
+    height: 4px;
+    background: #FEA039;
+    border-radius: 50%;
+  }
+  
+  /* Добавляем анимацию "flying" для всех точек */
+  .flying-dot {
+    animation: flying 10s ease-in-out -3s infinite alternate;
+  }
+  
+  /* Все точки будут использовать анимацию "rotating", как в исходном SASS-коде */
+  .dot-1 {
+    transform-origin: 2px -5px;
+    animation: rotating 16s ease-in-out -9s infinite;
+  }
+  
+  /* ... Повторите для всех точек от dot-2 до dot-75 */
+  
